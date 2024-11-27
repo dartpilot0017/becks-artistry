@@ -1,0 +1,60 @@
+
+/* resulting css */
+{
+    filter: contrast(180%) brightness(100%);
+    background: 
+      linear-gradient(to bottom right, rgba(211,196,227,1), rgba(109,83,165,1)),
+      conic-gradient(from 360deg at 87% 106%, rgba(109,83,165,1), rgba(0,0,0,1)),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 340 340' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.31' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      width: 100vw;
+      height: 100vh;
+  }
+    
+
+.grain-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  h1 {
+    z-index: 2;
+    font-size: 2rem;
+  }
+  
+  .grains {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures grains don’t block mouse interactions */
+  }
+  
+  .grain {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #8b00ff; /* Purple-like color */
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: moveGrain 10s infinite ease-in-out;
+  }
+  
+  @keyframes moveGrain {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(20px, 20px);
+    }
+  }
+  
