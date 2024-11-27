@@ -24,19 +24,19 @@ const Header: React.FC = () => {
             Home
           </a>
           <a
-            href="/portfolio"
+            href="#portfolio"
             className="hover:text-purple-400 transition"
           >
             Portfolio
           </a>
           <a
-            href="/about"
+            href="#about"
             className="hover:text-purple-400 transition"
           >
             About
           </a>
           <a
-            href="/contact"
+            href="#contact"
             className="hover:text-purple-400 transition"
           >
             Contact

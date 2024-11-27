@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="p-10 bg-black text-white">
+    <section id="contact" className="p-10 pt-[120px] bg-black text-white">
       <h2 className="text-3xl font-bold text-center">Get in Touch</h2>
       <p className="mt-4 text-center">
         We'd love to hear from you! Whether you have questions or want to
