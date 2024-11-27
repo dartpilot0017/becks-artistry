@@ -15,10 +15,10 @@ const PortfolioShowcase: React.FC = () => {
         src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
      },
     { title: "Modern Vibes", description: "Art for contemporary spaces.",
-        src: "",
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
      },
     { title: "Dreamlike Visions", description: "Surreal compositions that captivate.",
-        src: ""
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
      },
   ];
 
@@ -32,7 +32,7 @@ const PortfolioShowcase: React.FC = () => {
             className="bg-purple-600 shadow-md rounded-lg hover:scale-105 transition"
           >
             <img
-              src={`https://via.placeholder.com/300?text=${art.title}`}
+              src={`${art.src}`}
               alt={art.title}
               className="w-full h-48 object-cover rounded"
             />
