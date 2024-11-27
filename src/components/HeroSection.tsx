@@ -11,18 +11,18 @@ const HeroSection: React.FC = () => {
       navigate('/portfolio');
     };
 
-    const appRef = useRef(null);
-    const toRef = useRef(null);
+    const appRef = useRef<HTMLDivElement | null>(null);
+    // const toRef = useRef(null);
 
   useEffect(() => {
-    const moveGradient = (event) => {
+    const moveGradient = (event: MouseEvent) => {
       const winWidth = window.innerWidth;
       const winHeight = window.innerHeight;
 
       const mouseX = Math.round((event.pageX / winWidth) * 100);
       const mouseY = Math.round((event.pageY / winHeight) * 100);
 
-      if (appRef) {
+      if (appRef.current) {
         appRef.current.style.setProperty(
           "--mouse-x", mouseX.toString() + "%"
         );
