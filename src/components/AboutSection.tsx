@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="p-10 bg-purple-700 text-white">
+    <section id="about" className="p-10 bg-white text-black pt-[120px]">
       <h2 className="text-3xl font-bold text-center">About Becks Artistry</h2>
       <p className="mt-6 text-lg text-center">
         Becks Artistry is dedicated to inspiring creativity in everyone. We

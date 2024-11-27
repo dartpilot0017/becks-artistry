@@ -2,30 +2,44 @@ import React from "react";
 
 const PortfolioShowcase: React.FC = () => {
   const artworks = [
-    { title: "Abstract Wonder", description: "A journey through color and form." },
-    { title: "Children's Imagination", description: "Capturing the magic of young minds." },
-    { title: "Nature's Beauty", description: "An artistic homage to the natural world." },
-    { title: "Portrait Perfection", description: "Timeless expressions through art." },
-    { title: "Modern Vibes", description: "Art for contemporary spaces." },
-    { title: "Dreamlike Visions", description: "Surreal compositions that captivate." },
+    { title: "Abstract Wonder", description: "A journey through color and form.",
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     },
+    { title: "Children's Imagination", description: "Capturing the magic of young minds.",
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     },
+    { title: "Nature's Beauty", description: "An artistic homage to the natural world.",
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     },
+    { title: "Portrait Perfection", description: "Timeless expressions through art.",
+        src: "https://images.unsplash.com/photo-1686276476863-687665119815?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     },
+    { title: "Modern Vibes", description: "Art for contemporary spaces.",
+        src: "",
+     },
+    { title: "Dreamlike Visions", description: "Surreal compositions that captivate.",
+        src: ""
+     },
   ];
 
   return (
-    <section className="p-10 bg-white">
-      <h2 className="text-3xl font-bold text-center text-black">Portfolio</h2>
+    <section id="portfolio" className="p-10  pt-[120px] bg-black text-white">
+      <h2 className="text-3xl font-bold text-center">Portfolio</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {artworks.map((art, index) => (
           <div
             key={index}
-            className="p-4 bg-purple-100 shadow-md hover:scale-105 transition"
+            className="bg-purple-600 shadow-md rounded-lg hover:scale-105 transition"
           >
             <img
               src={`https://via.placeholder.com/300?text=${art.title}`}
               alt={art.title}
               className="w-full h-48 object-cover rounded"
             />
-            <h3 className="mt-4 text-lg font-bold text-black">{art.title}</h3>
-            <p className="text-sm text-gray-700">{art.description}</p>
+            <div className="p-4 pt-0">
+            <h3 className="mt-4 text-lg font-bold text-white">{art.title}</h3>
+            <p className="text-sm text-white-700">{art.description}</p>
+            </div>
           </div>
         ))}
       </div>
