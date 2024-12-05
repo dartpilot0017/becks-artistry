@@ -3,14 +3,14 @@ import logo from '../assets/logo.jpg';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-black text-white fixed top-0 w-full z-50 shadow-md">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+    <header className="bg-white text-black fixed top-0 w-full z-50">
+      <div className="container mx-auto flex items-center justify-between py-2 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <img
             src = {logo} // Replace with the path to your logo
             alt="Becks Artistry Logo"
-            className="h-10 w-10 object-contain"
+            className="h-14 w-15 object-cover"
           />
           <span className="text-xl font-bold text-purple-500">Becks Artistry</span>
         </div>

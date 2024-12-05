@@ -1,68 +1,32 @@
-
-/* resulting css */
-.grained {
-  width: 100vw;
-  height: 100vh;
-  filter: contrast(130%) brightness(150%);
-  scroll-behavior: smooth;
-  background: 
-  /* linear-gradient(
-      to bottom left,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.61)
-    ), */
-    /* conic-gradient(at var(--mouse-x) var(--mouse-y), rgba(109,83,165,1), rgba(0,0,0,1)), */
-      radial-gradient(
-        at var(--mouse-x) var(--mouse-y),
-        rgba(255, 255, 255, 0.2),
-        rgba(0, 0, 0, 0.8)
-      ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 340 340' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.31' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-.grain-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  overflow: hidden;
+.grain-effect {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  font-family: "Arial", sans-serif;
-  color: white;
 }
 
-h1 {
-  z-index: 2;
-  font-size: 2rem;
-}
-
-.grains {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Ensures grains don’t block mouse interactions */
-}
-
-.grain {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #8b00ff; /* Purple-like color */
-  opacity: 0.3;
-  border-radius: 50%;
-  animation: moveGrain 10s infinite ease-in-out;
-}
-
-@keyframes moveGrain {
-  0% {
-    transform: translate(0, 0);
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
   }
-  100% {
-    transform: translate(20px, 20px);
+  to {
+    transform: scale(1.2);
   }
 }
+
+@keyframes zoomOut {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.zoom-in img {
+  animation: zoomIn 0.7s forwards;
+}
+
+.zoom-out img {
+  animation: zoomOut 0.7s forwards;
+}
+

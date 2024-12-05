@@ -32,19 +32,9 @@ const App: React.FC = () => {
         <Footer />
       </div>
       </div>
-      {/* <div className="flex flex-col min-h-screen">
-        <Header />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div> */}
     </Router>
+
+    
   );
 };
 
