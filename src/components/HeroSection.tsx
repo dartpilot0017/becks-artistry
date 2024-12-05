@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
   }, [appRef])
     
   return (
-    <div className="grained" ref={appRef}>
+    <div className="bg-white">
         <div className=" text-black h-screen flex flex-col items-center justify-center">
       <div className="text-4xl font-bold text-center">
         <Typewriter

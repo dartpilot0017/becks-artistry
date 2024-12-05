@@ -23,13 +23,13 @@ const PortfolioShowcase: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="p-10  pt-[120px] bg-black text-white">
-      <h2 className="text-3xl font-bold text-center">Portfolio</h2>
+    <section id="portfolio" className="p-10 pb-[120px] pt-[120px] bg-white text-white">
+      <h2 className="text-3xl font-bold text-center text-black">Portfolio</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {artworks.map((art, index) => (
           <div
             key={index}
-            className="bg-purple-600 shadow-md rounded-lg hover:scale-105 transition"
+            className="bg-black shadow-md rounded-lg hover:scale-105 transition"
           >
             <img
               src={`${art.src}`}
@@ -37,7 +37,7 @@ const PortfolioShowcase: React.FC = () => {
               className="w-full h-48 object-cover rounded"
             />
             <div className="p-4 pt-0">
-            <h3 className="mt-4 text-lg font-bold text-white">{art.title}</h3>
+            <h3 className="mt-4 text-lg font-bold">{art.title}</h3>
             <p className="text-sm text-white-700">{art.description}</p>
             </div>
           </div>
